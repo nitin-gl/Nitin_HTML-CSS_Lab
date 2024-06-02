@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Dropdown</title>
+    <style>
+        .menu-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+       header h1 {
+            background-color: rgb(246, 103, 103);
+            text-align: center;
+            margin-bottom: 0;
+            width: 100%;
+            height: 25px;
+            padding: 25px;
+        }
+
+        #main {
+            background-color: grey;
+        }
+
+        #main>li {
+            display: inline-block;
+        }
+
+        #main>li>a {
+            padding: 8px;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+        }
+
+        li {
+            margin-right: 15px;
+        }
+
+        #main>li>a:hover {
+            background-color: black;
+        }
+
+        #Sub_Menu, #Sub_Menu-2 {
+            position: absolute;
+            background-color: lightgrey;
+            top: 40px;
+            padding: 5px;
+            white-space: nowrap;
+            display: none;
+        }
+
+        #main-menu-item2, #main-menu-item3 {
+            position: relative;
+        }
+
+        #main-menu-item2:hover #Sub_Menu {
+            display: block;
+        }
+
+        /* #Sub_Menu-2 {
+            position: absolute;
+            background-color: lightgrey;
+            top: 40px;
+            padding: 5px;
+            white-space: nowrap;
+            display: none;
+        } */
+
+        /* #main-menu-item3 {
+            position: relative;
+        } */
+
+        #main-menu-item3:hover #Sub_Menu-2 {
+            display: block;
+        }
+        /* .menu-items li:nth-child(3):hover #Sub_Menu-2 {
+            display: block;
+        } */
+        li>a{
+            text-decoration: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+    <h1>Demo of Drop Down List</h1>
+</header>
+    <nav>
+        <ul id="main" class="menu-items">
+            <li>
+                <a href="/link1">List 1</a>
+            </li>
+            <li id="main-menu-item2">
+                <a href="/link2">List 2</a>
+                <!-- add list to link 2 -->
+                <ul id="Sub_Menu" class="menu-items">
+                    <li>
+                        <a href="/ddlink1">DD link1</a>
+                    </li>
+                    <li>
+                        <a href="/ddlink2">DD link2</a>
+                    </li>
+                    <li>
+                        <a href="/ddlink3">DD link3</a>
+                    </li>
+                </ul>
+            </li>
+            <li id="main-menu-item3">
+                <a href="/link3">List 3</a>
+                <ul id="Sub_Menu-2" class="menu-items">
+                    <li>
+                        <a href="/ddlink4">DD link1</a>
+                    </li>
+                    <li>
+                        <a href="/ddlink5">DD link2</a>
+                    </li>
+                    <li>
+                        <a href="/ddlink6">DD link3</a>
+                    </li>
+                    <li>
+                        <a href="/ddlink7">DD link4</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
